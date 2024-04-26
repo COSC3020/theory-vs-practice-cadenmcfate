@@ -19,8 +19,8 @@
 
   2a) Asymptotic analysis doesn't pay attention to small data sets. The analysis of an algorithm as $n\rightarrow\inf$ could be misleading when it comes to smaller, more realistically sized data sets. This is shown on the average case runtime graph on slide 37 where, for example, the Mergesort line is well below the line for Mergesort in-place for smaller lists, but they become indistinguishable at $n=1,000,000$. 
   
-  3a) Performance often depends on the implimentation. You might trade memory for runtime, or runtime for stability, or something to that effect, depending on what you are specifically trying to impliment.
-
+  3a) Big Oh notation is not strict. An algorithm of $O(n)$ is also an element of $O(n^2)$, $O(n!)$, etc. Same goes for Big Omega notation, just in the other direction. Using loose bounds to describe the runtime of an algorithm can lead to an innacurate picture of its runtime. 
+  
 ## 2:
 
 We know the average case of search in a binary search tree is $\Theta (logn)$. Since 1,000 elements correlates to 5 seconds of runtime, we can extrapolate that finding the same element in a tree of 10,000 elements will take roughly 1 more second:
